@@ -19,7 +19,6 @@ typedef struct StrNode
     struct StrNode *anterior;
 } StrNode;
 
-// Pilha numérica
 NumNode *adicionarNumero(NumNode **pilha, float valor)
 {
     NumNode *novo = malloc(sizeof(NumNode));
@@ -38,7 +37,6 @@ NumNode *removerNumero(NumNode **pilha)
     return removido;
 }
 
-// Pilha de strings
 StrNode *empilharStr(StrNode *topo, const char *texto)
 {
     StrNode *novo = malloc(sizeof(StrNode));

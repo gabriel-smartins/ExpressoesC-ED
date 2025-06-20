@@ -11,7 +11,7 @@ int main()
     // 1. Entrada infixa
     printf("Digite a expressao infixa:\n> ");
     fgets(exp.inFixa, 512, stdin);
-    exp.inFixa[strcspn(exp.inFixa, "\n")] = 0; // Remove newline
+    exp.inFixa[strcspn(exp.inFixa, "\n")] = 0;
 
     // 1.1. Converter infixa para pós-fixa e avaliar
     strcpy(exp.posFixa, getFormaPosFixa(exp.inFixa));
@@ -23,7 +23,7 @@ int main()
     // 2. Entrada pós-fixa
     printf("\nDigite a expressao pos-fixa:\n> ");
     fgets(exp.posFixa, 512, stdin);
-    exp.posFixa[strcspn(exp.posFixa, "\n")] = 0; // Remove newline
+    exp.posFixa[strcspn(exp.posFixa, "\n")] = 0;
 
     // 2.1. Converter pós-fixa para infixa e avaliar
     strcpy(exp.inFixa, getFormaInFixa(exp.posFixa));
